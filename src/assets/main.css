@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--grey);
+    overflow: hidden;
 }
 
 * {
@@ -10,4 +11,25 @@ body {
 
 :root {
     --grey: #f1f2f3;
+    --dark-transparent: rgba(210, 213, 216, 0.5);
+    --white: #FFF;
+}
+
+/* PAGE */
+.page {
+    display: block;
+    position: absolute;
+
+    top: -200px;
+    left: 500px;
+
+    width: 21cm;
+    height: 29.7cm;
+    
+    background-color: var(--white);
+    box-shadow: 0px 0px 15px var(--dark-transparent);
+    
+    transform: scale(0.5);
+
+    cursor: pointer;
 }
