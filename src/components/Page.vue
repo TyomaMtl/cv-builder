@@ -1,13 +1,20 @@
 <template>
-    <div class="page" v-on:mousedown="move" v-on:wheel="zoom"></div>
+    <div class="page" v-on:mousedown="move" v-on:wheel="zoom">
+        <page-template></page-template>
+    </div>
 </template>
 
 <script>
+import pageTemplate from './Template'
+
 export default {
     data: function () {
         return {
             scale: 0.5 // page zoom
         }
+    },
+    components: {
+        pageTemplate: pageTemplate
     },
     methods: {
         move: function (event) {
