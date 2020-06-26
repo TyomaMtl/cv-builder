@@ -6,6 +6,9 @@ body {
     background-color: var(--grey);
     overflow: hidden;
 }
+h1 {
+    margin: 0; padding: 0;
+}
 h3 {
     font-family: var(--font-basic);
     font-size: 25px;

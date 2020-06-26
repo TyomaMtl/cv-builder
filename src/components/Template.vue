@@ -1,12 +1,91 @@
 <template>
     <div>
-        Firstname : {{ datas.profile.firstname }}
-        Lastname : {{ datas.profile.lastname }}
-        E-Mail : {{ datas.profile.email }}
-        Website : {{ datas.profile.website }}
-        Phone : {{ datas.profile.phone }}
+        <header>
+            <h1>{{ datas.profile.firstname }} {{ datas.profile.lastname }}</h1>
+        </header>
+        <aside>
+            <img src="">
+            <h3>Résumé</h3>
+            <p>{{ datas.profile.email }}</p>
+            <p>{{ datas.profile.website }}</p>
+            <p>{{ datas.profile.phone }}</p>
+            <h3>Languages</h3>
+            <ul>
+                <li v-for="(lang, index) in datas.languages" :key="index">{{ lang.name }}</li>
+            </ul>
+        </aside>
+        <content>
+
+            <h2>Skills</h2>
+            <ul>
+                <li v-for="(skill, index) in datas.skills" :key="index">{{ skill.name }}</li>
+            </ul>
+            
+            <h2>Experiences</h2>
+            <div v-for="(xp, index) in datas.experiences" :key="index">
+                <h3>{{ xp.company }}</h3>
+                <p>{{ xp.title }} <span v-if="xp.start || xp.end">/</span> <span>{{ xp.start }}</span> <span v-if="xp.start && xp.end">-</span> <span>{{ xp.end }}</span></p>
+                <p v-if="xp.description">{{ xp.description }}</p>
+            </div>
+
+            <h2>Studies</h2>
+            <div v-for="(study, index) in datas.studies" :key="index">
+                <h3>{{ study.school }}</h3>
+                <p>{{ study.title }} <span v-if="study.start || study.end">/</span> <span>{{ study.start }}</span> <span v-if="study.start && study.end">-</span> <span>{{ study.end }}</span></p>
+                <p>Description</p>
+            </div>
+
+        </content>
     </div>
 </template>
+
+<style scoped>
+div {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #494949;
+}
+img {
+    display: block;
+    margin: 0 auto 2cm auto;
+
+    width: 5cm;
+    height: 5cm;
+    
+    border-radius: 50%;
+    background: #FFF;
+}
+h3 {
+    margin-bottom: 0px;
+}
+aside {
+    display: block;
+    float: left;
+    padding: 1cm;
+
+    width: 7cm;
+    height: 29.7cm;
+    
+    background-color: antiquewhite;
+}
+header {
+    display: block;
+    margin-top: 2cm;
+    float: right;
+    width: calc(21cm - 7cm);
+    height: 3cm;
+    line-height: 3cm;
+    background-color: antiquewhite;
+}
+header > h1 {
+    padding-left: 20px;
+}
+content {
+    float: right;
+    padding-left: 20px;
+    width: calc(21cm - 7cm);
+    height: calc(29.7cm - 5cm);
+}
+</style>
 
 <script>
 export default {
