@@ -9,33 +9,16 @@ const store = new Vuex.Store({
             profile: {
                 firstname: '',
                 lastname: '',
+                title: '',
                 email: '',
                 phone: '',
-                website: ''
+                website: '',
+                resume: ''
             },
-            languages: [
-                { name: '', level: '' }
-            ],
+            languages: [],
             skills: [],
-            experiences: [
-                { 
-                    title: '',
-                    company: '',
-                    from: '',
-                    to: '',
-                    description: ''
-                }
-            ],
-            studies: [
-                {
-                    school: '',
-                    title: '',
-                    start: '',
-                    end: '',
-                    where: '',
-                    description: ''
-                }
-            ]
+            experiences: [],
+            studies: []
         },
     },
     getters: {
