@@ -2,18 +2,23 @@
     <div class="builder">
         <div class="nav">
             <div v-on:click="section = 'profile'">
+                <i class="ic-user"></i>
                 <span>Profile</span>
             </div>
             <div v-on:click="section = 'languages'">
+                <i class="ic-earth"></i>
                 <span>Languages</span>
             </div>
             <div v-on:click="section = 'skills'">
+                <i class="ic-wrench"></i>
                 <span>Skills</span>
             </div>
             <div v-on:click="section = 'experiences'">
+                <i class="ic-user-tie"></i>
                 <span>Experiences</span>
             </div>
             <div v-on:click="section = 'studies'">
+                <i class="ic-briefcase"></i>
                 <span>Studies</span>
             </div>
         </div>
