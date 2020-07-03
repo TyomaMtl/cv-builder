@@ -38,7 +38,7 @@
             <div v-for="(study, index) in datas.studies" :key="index">
                 <h3>{{ study.school }}</h3>
                 <p>{{ study.title }} <span v-if="study.start || study.end">/</span> <span>{{ study.start }}</span> <span v-if="study.start && study.end">-</span> <span>{{ study.end }}</span></p>
-                <p>Description</p>
+                <p>{{ study.description }}</p>
             </div>
 
         </content>
