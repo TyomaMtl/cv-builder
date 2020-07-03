@@ -2,6 +2,7 @@
     <div>
         <header>
             <h1>{{ datas.profile.firstname }} {{ datas.profile.lastname }}</h1>
+            <p>{{ datas.profile.title }}</p>
         </header>
         <aside>
             <img :src="datas.profile.image">
@@ -78,11 +79,20 @@ header {
     float: right;
     width: calc(21cm - 7cm);
     height: 3cm;
-    line-height: 3cm;
     background-color: antiquewhite;
 }
-header > h1 {
+header > h1, header > p {
     padding-left: 20px;
+    text-transform: uppercase;
+}
+header > h1 {
+    margin-top: 24px;
+    margin-bottom: 6px;
+}
+header > p {
+    margin-top: 0px;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
 content {
     float: right;
