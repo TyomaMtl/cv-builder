@@ -227,3 +227,27 @@ ul.tags > li:hover {
     color: var(--red);
     border: 1px solid var(--red);
 }
+
+/* EXPORT BTN */
+.btn-export {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    padding: 0px 20px 0px 20px;
+
+    height: 40px;
+    font-family: var(--font-basic);
+    font-size: 12px;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    border: none;
+    border-radius: 20px;
+
+    box-shadow: 0px 0px 15px var(--dark-transparent);
+    background-color: var(--dark);
+    color: var(--white);
+
+    cursor: pointer;
+}
