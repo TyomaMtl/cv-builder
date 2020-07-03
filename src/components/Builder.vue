@@ -24,6 +24,10 @@
             <div v-on:click="section = 'hobbies'">
                 <span>Hobbies</span>
             </div>
+            <div v-on:click="section = 'colors'">
+                <i class="ic-droplet"></i>
+                <span>Colors</span>
+            </div>
         </div>
         
         <!-- PROFILE -->
@@ -105,11 +109,30 @@
                 <input type="text" v-model="hobbie.name" placeholder="Hobbie name">
             </div>
         </div>
+
+        <!-- COLORS -->
+        <div class="section" v-if="section == 'colors'">
+            <h3>Colors</h3>
+            <div class="verte-section">
+                <verte v-model="datas.colors.background" model="rgb"></verte> 
+                <div>Background</div>
+            </div>
+            <div class="verte-section">
+                <verte v-model="datas.colors.font" model="rgb"></verte> 
+                <div>Font</div>
+            </div>
+        </div>
     </div>    
 </template>
 
 <script>
+import verte from 'verte'
+import 'verte/dist/verte.css';
+
 export default {
+    components: {
+        verte
+    },
     data: function () {
         return {
             section: 'profile',

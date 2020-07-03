@@ -19,7 +19,11 @@ const store = new Vuex.Store({
             skills: [],
             experiences: [],
             studies: [],
-            hobbies: []
+            hobbies: [],
+            colors: {
+                background: 'antiquewhite',
+                font: ''
+            }
         },
     },
     getters: {

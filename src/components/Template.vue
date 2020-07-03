@@ -1,10 +1,10 @@
 <template>
     <div>
-        <header>
+        <header :style="background">
             <h1>{{ datas.profile.firstname }} {{ datas.profile.lastname }}</h1>
             <p>{{ datas.profile.title }}</p>
         </header>
-        <aside>
+        <aside :style="background">
             <img :src="datas.profile.image">
             <h3>Resume</h3>
             <p>{{ datas.profile.resume }}</p>
@@ -70,8 +70,6 @@ aside {
 
     width: 7cm;
     height: 29.7cm;
-    
-    background-color: antiquewhite;
 }
 header {
     display: block;
@@ -79,7 +77,6 @@ header {
     float: right;
     width: calc(21cm - 7cm);
     height: 3cm;
-    background-color: antiquewhite;
 }
 header > h1, header > p {
     padding-left: 20px;
@@ -112,6 +109,12 @@ export default {
     computed: {
         datas: function () {
             return this.$store.state.datas
+        },
+        font: function () {
+            return 'color:' + this.datas.colors.background + ';'
+        },
+        background: function () {
+            return 'background-color:' + this.datas.colors.background + ';'
         }
     }
 }

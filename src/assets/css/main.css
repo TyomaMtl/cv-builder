@@ -251,3 +251,17 @@ ul.tags > li:hover {
 
     cursor: pointer;
 }
+
+.verte-section {
+    display: flex;
+    justify-content: left;
+}
+.verte-section > div {
+    font-family: var(--font-basic);
+    line-height: 25px;
+    cursor: default;
+}
+.verte {
+    display: block;
+    margin-right: 10px;
+}
