@@ -18,7 +18,8 @@ const store = new Vuex.Store({
             languages: [],
             skills: [],
             experiences: [],
-            studies: []
+            studies: [],
+            hobbies: []
         },
     },
     getters: {
@@ -50,6 +51,12 @@ const store = new Vuex.Store({
         },
         removeStudy (state, index) {
             state.datas.studies.splice(index, 1)
+        },
+        addHobbie (state) {
+            state.datas.hobbies.push({ name: '' })
+        },
+        removeHobbie (state, index) {
+            state.datas.hobbies.splice(index, 1)
         }
     }
 })

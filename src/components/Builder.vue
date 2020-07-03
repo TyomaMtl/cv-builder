@@ -21,6 +21,9 @@
                 <i class="ic-briefcase"></i>
                 <span>Studies</span>
             </div>
+            <div v-on:click="section = 'hobbies'">
+                <span>Hobbies</span>
+            </div>
         </div>
         
         <!-- PROFILE -->
@@ -76,7 +79,7 @@
         <!-- STUDIES -->
         <div class="section" v-if="section == 'studies'">
             <h3>Studies</h3>
-            <a href="#" v-on:click="$store.commit('addStudy', index)" class="btn add">Add study</a>
+            <a href="#" v-on:click="$store.commit('addStudy')" class="btn add">Add study</a>
             <div v-for="(study, index) in datas.studies" :key="index" class="form-section">
                 <div class="title">Study {{ index+1 }}</div>
                 <a href="#" v-on:click="$store.commit('removeStudy', index)" class="btn remove">Remove</a>
@@ -88,6 +91,17 @@
                 </div>
                 <input type="text" v-model="study.where" placeholder="Where ?">
                 <textarea v-model="study.description" placeholder="Description"></textarea>
+            </div>
+        </div>
+
+        <!-- HOBBIES -->
+        <div class="section" v-if="section == 'hobbies'">
+            <h3>Hobbies</h3>
+            <a href="#" v-on:click="$store.commit('addHobbie')" class="btn add">Add hobbie</a>
+            <div v-for="(hobbie, index) in datas.hobbies" :key="index" class="form-section">
+                <div class="title">Hobbie {{ index+1 }}</div>
+                <a href="#" v-on:click="$store.commit('removeHobbie', index)" class="btn remove">Remove</a>
+                <input type="text" v-model="hobbie.name" placeholder="Hobbie name">
             </div>
         </div>
     </div>    

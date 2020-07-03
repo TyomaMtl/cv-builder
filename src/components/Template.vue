@@ -13,6 +13,10 @@
             <ul>
                 <li v-for="(lang, index) in datas.languages" :key="index">{{ lang.name }}</li>
             </ul>
+            <h3>Hobbies</h3>
+            <ul>
+                <li v-for="(hobbie, index) in datas.hobbies" :key="index">{{ hobbie.name }}</li>
+            </ul>
         </aside>
         <content>
 
