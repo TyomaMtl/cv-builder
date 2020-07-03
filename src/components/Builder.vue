@@ -31,11 +31,12 @@
             <h3>Profile</h3>
             <input type="text" v-model="datas.profile.firstname" placeholder="Firstname">
             <input type="text" v-model="datas.profile.lastname" placeholder="Lastname">
+            <input type="text" v-model="datas.profile.image" placeholder="Image : http://website.fr/my-photo.jpg">
             <input type="text" v-model="datas.profile.title" placeholder="Title">
             <input type="email" v-model="datas.profile.email" placeholder="E-Mail">
             <input type="text" v-model="datas.profile.phone" placeholder="Phone">
             <input type="text" v-model="datas.profile.website" placeholder="Website">
-            <textarea placeholder="Description"></textarea>
+            <textarea v-model="datas.profile.resume" placeholder="Description"></textarea>
         </div>
 
         <!-- LANGUAGES -->

@@ -4,8 +4,9 @@
             <h1>{{ datas.profile.firstname }} {{ datas.profile.lastname }}</h1>
         </header>
         <aside>
-            <img src="">
-            <h3>Résumé</h3>
+            <img :src="datas.profile.image">
+            <h3>Resume</h3>
+            <p>{{ datas.profile.resume }}</p>
             <p>{{ datas.profile.email }}</p>
             <p>{{ datas.profile.website }}</p>
             <p>{{ datas.profile.phone }}</p>
