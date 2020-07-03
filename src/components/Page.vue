@@ -51,18 +51,14 @@ export default {
             let el = event.target
 
             if (event.deltaY > 0) {
-                console.log('up')
                 if (this.scale > 0.1) {
                     this.scale = this.scale - 0.01
                 }
             } 
             
             if (event.deltaY < 0) {
-                console.log('down')
                 this.scale = this.scale + 0.01
             }
-            
-            console.log(this.scale)
             
             el.style.transform = 'scale(' + this.scale + ')'
         }
