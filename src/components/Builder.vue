@@ -114,12 +114,32 @@
         <div class="section" v-if="section == 'colors'">
             <h3>Colors</h3>
             <div class="verte-section">
-                <verte v-model="datas.colors.background" model="rgb"></verte> 
+                <verte v-model="datas.colors.background" model="hex"></verte> 
                 <div>Background</div>
             </div>
             <div class="verte-section">
-                <verte v-model="datas.colors.font" model="rgb"></verte> 
-                <div>Font</div>
+                <verte v-model="datas.colors.h1" model="hex"></verte> 
+                <div>Heading 1</div>
+            </div>
+            <div class="verte-section">
+                <verte v-model="datas.colors.h2" model="hex"></verte> 
+                <div>Heading 2</div>
+            </div>
+            <div class="verte-section">
+                <verte v-model="datas.colors.h3" model="hex"></verte> 
+                <div>Heading 3</div>
+            </div>
+            <div class="verte-section">
+                <verte v-model="datas.colors.font1" model="hex"></verte> 
+                <div>Font 1</div>
+            </div>
+            <div class="verte-section">
+                <verte v-model="datas.colors.font2" model="hex"></verte> 
+                <div>Font 2</div>
+            </div>
+            <div class="verte-section">
+                <verte v-model="datas.colors.font3" model="hex"></verte> 
+                <div>Font 3</div>
             </div>
         </div>
     </div>    

@@ -21,8 +21,13 @@ const store = new Vuex.Store({
             studies: [],
             hobbies: [],
             colors: {
-                background: 'antiquewhite',
-                font: ''
+                background: '#C4C4C4',
+                h1: '#2e3c49',
+                h2: '#2e3c49',
+                h3: '#2e3c49',
+                font1: '#2e3c49',
+                font2: '#2e3c49',
+                font3: '#2e3c49'
             }
         },
     },
